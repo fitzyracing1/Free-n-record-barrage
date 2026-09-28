@@ -1,0 +1,43 @@
+# Free-n-record
+
+> A Python record for the free(n) compressor loop: log, compress, route, and write an artifact.
+
+## Purpose
+Explain Free-n-record as the notebook that free(n) writes into. Source: fitzyracing1/Free-n-record.
+
+## How it works (plain English)
+1. Arm free(n).
+2. If n is zero or below, force n to zero.
+3. Log, compress, and route the goal.
+4. Write the record.
+
+## Key ideas
+- free(n) (the trigger that starts the loop)
+- Record (the written log of that pass)
+- n-state (zero or below becomes zero)
+
+## The actual code
+```
+# source: fitzyracing1/Free-n-record
+if n <= 0: n = 0
+log_compress_route()
+write_record()
+```
+
+## Line-by-line translation
+1. if n <= 0: n = 0 → “do not let n go negative”
+2. log_compress_route() → “write, shrink, and send”
+3. write_record() → “save that pass”
+
+## Decisions the program makes
+- If n is low → force zero then record
+- If a goal arrives → run one pass and store it
+
+## What a person would notice
+A dated notebook for compressed jobs.
+
+## Current status
+Barrage clone.
+
+## Next possible steps
+Open the source and read the latest record.
